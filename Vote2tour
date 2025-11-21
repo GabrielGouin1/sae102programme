@@ -2,6 +2,19 @@
 /**
  * @date 21/11/2025
  */
+void comptagedepoints (int vote)
+{
+    //tableau initialisé en dehors pour éviter que ce soit remis à 0 à chaque fois
+    for (int i =1; i<5; i++) //i=1 correspond au numéro de glace et inférieur à 5 pour compter jusqu'à 4.
+    {
+        if (vote == i) //est-ce que le vote correspond au numéro de la glace
+        {
+            compteurpoints[i-1] = compteurpoints[i-1] + 1; //i-1 parce que le tableau commence à 0
+            break;
+        }
+        i++;
+    }
+}
 
 int main()
 {
@@ -15,34 +28,44 @@ int main()
     vector <string> vGlacePref;
     for (unsigned i (0); i < 4; ++i)
         vGlacePref.push_back(litUneString());
-
+    //tableau pour compter les votes pour chaque glace
+    vector<int> compteurpoints (4,0);
+    
     /* debug */
     affichVectString (vGlacePref);
 
     //On lit les datas du clavier, et on les stocke
         vector<participant> vParticipant;
     //boucle premier tour
-    for (unsigned i (0); i < 10; ++i){
+    for (unsigned i (0); i < 116; ++i){
         string nom (litUneString());
-        //on modifie ici
-        if (nom == "FINPREMIERTOUR") break;
         string prenom  (litUneString());
         int numGlace (litUnEntier());
-        cout << nom << endl << prenom << endl << numGlace << endl;
-        vParticipant.push_back(participant{nom, prenom, numGlace});
-        if ((!cin) ||)
+        //on compte pour quelle glace est le vote
+        comptagedepoints(numGlace);
+        //cout << nom << endl << prenom << endl << numGlace << endl;
+        //vParticipant.push_back(participant{nom, prenom, numGlace});
               //  vJoueur[numEquipe-1].push_back(joueur {nom, prenom, numEquipe});
     }
-    //comptage des points
+    
+    //on récupère les deux meilleures glaces (le plus de vote)
+    //Nina l'a
+    
+    //et on le remet dans un nouveau tableau avec 2 entrée cette fois.
+    vector <string> vGlacePref;
+    for (unsigned i (0); i < 2; ++i)
+        vGlacePref.push_back(litUneString());
+    
+    
 
     //deuxième tour
-    for (unsigned i (0); i < 10; ++i){
+    for (unsigned i (0); i < 116; ++i){
         string nom (litUneString());
         string prenom  (litUneString());
         int numGlace (litUnEntier());
-        cout << nom << endl << prenom << endl << numGlace << endl;
-        vParticipant.push_back(participant{nom, prenom, numGlace});
-        if ((!cin) ||)
+        comptagedepoints(numGlace);
+        //cout << nom << endl << prenom << endl << numGlace << endl;
+        //vParticipant.push_back(participant{nom, prenom, numGlace});
             //  vJoueur[numEquipe-1].push_back(joueur {nom, prenom, numEquipe});
     }
 

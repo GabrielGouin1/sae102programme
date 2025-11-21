@@ -143,8 +143,26 @@ int main()
             }
         }
         
-        //On refait un comptage
-        for (const participant & part = vParticipant[i]; ){
+        //On refait un comptage en comptant la deuxieme partie des voix
+        for (unsigned i (0); i < 117; ++i){
+            string nom (litUneString());
+            string prenom  (litUneString());
+            int numGlace (litUnEntier());
+            vParticipant.push_back(participant{nom, prenom, numGlace});
+        }
+
+        //On replace les gagnantes en premier
+        if(vGlacePref[0]==vGlacePref[max2]){
+            temp = vGlacePref[0];
+            vGlacePref[0] = vGlacePref[max1];
+            vGlacePref[1] = temp;
+        else if
+            vGlacePref[0] = vGlacePref[max1];
+            vGlacePref[1] = vGlacePref[max2];
+
+        }
+
+        for (const participant & part = vParticipant){
             if (vCompteur[part.glacePref-1] == max1)
                 vCompteur2[0] += 1;
             else if (vCompteur[part.glacePref-1] == max2)
@@ -153,9 +171,9 @@ int main()
 
         //On affiche la glace élue ou annonce une égalité
         if (vCompteur2[0] > vCompteur2[1])
-            cout << "la glace élue est : " << vGlacePref[max1] << endl;
+            cout << "la glace élue est : " << vGlacePref[0] << endl;
         else if (vCompteur2[1] > vCompteur2[0])
-            cout << "la glace élue est : " << vGlacePref[max2] << endl;
+            cout << "la glace élue est : " << vGlacePref[1] << endl;
         else
             cout << "Egalité entre les deux glaces en tête" << endl;
 

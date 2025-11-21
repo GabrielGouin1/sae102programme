@@ -150,6 +150,8 @@ int main()
             else if (vCompteur[part.glacePref-1] == max2)
                 vCompteur2[1] += 1;
         }
+
+        //On affiche la glace élue ou annonce une égalité
         if (vCompteur2[0] > vCompteur2[1])
             cout << "la glace élue est : " << vGlacePref[max1] << endl;
         else if (vCompteur2[1] > vCompteur2[0])

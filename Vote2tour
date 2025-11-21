@@ -59,7 +59,7 @@ int main()
     
 
     //deuxième tour
-    for (unsigned i (0); i < 116; ++i){
+    for (unsigned i (0); i < 117; ++i){
         string nom (litUneString());
         string prenom  (litUneString());
         int numGlace (litUnEntier());
@@ -98,7 +98,7 @@ int main()
     //On lit les datas du clavier, et on les stocke
     vector<participant> vParticipant;
 
-    for (unsigned i (0); i < 10; ++i){
+    for (unsigned i (0); i < 117; ++i){
         string nom (litUneString());
         string prenom  (litUneString());
         int numGlace (litUnEntier());

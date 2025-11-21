@@ -133,14 +133,13 @@ int main()
         //Les deux glaces en tete
         int max1 = 0;
         int max2 = 0;
-        vector<int> vCompteur2 (2,0);
-        for (unsigned i (0); i < 4; i=i+1){
-            if (vCompteur[i] > max1){
+        for (unsigned i=1; i < 4; i=i+1){
+            if (vCompteur[i] > vCompteur[max1]){
                 max2 = max1;
-                max1 = vCompteur[i];
+                max1 = i;
             }
-            else if (vCompteur[i] > max2){
-                max2 = vCompteur[i];
+            else if (vCompteur[i] > vCompteur[max2]){
+                max2 = i;
             }
         }
         

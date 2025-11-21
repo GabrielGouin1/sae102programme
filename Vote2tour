@@ -77,3 +77,86 @@ int main()
     cout << "c'est la glace " << vGlacePref[0] << " qui a gagne" << endl;
     return 0;
 }
+
+//--------------------------CODE MODIFIE-------------------------------------
+
+
+
+int main()
+{
+    //cout << "Hello World!" << endl;
+    //vector<participant> vParticipant (19);
+    /* on va detecter les glaces preférées des votants
+    * tout en virant les commentaires
+    */
+
+    /* on vote sur 4 glaces */
+    vector<string> vGlacePref;
+    for (unsigned i (0); i < 4; ++i)
+        vGlacePref.push_back(litUneString());
+    affichVectString(vGlacePref);
+    //On lit les datas du clavier, et on les stocke
+    vector<participant> vParticipant;
+
+    for (unsigned i (0); i < 10; ++i){
+        string nom (litUneString());
+        string prenom  (litUneString());
+        int numGlace (litUnEntier());
+        //cout << nom << endl << prenom << endl << numGlace << endl;
+        vParticipant.push_back(participant{nom, prenom, numGlace});
+              //  vJoueur[numEquipe-1].push_back(joueur {nom, prenom, numEquipe});
+    }
+
+    affichVectParticipants(vParticipant);
+    cout << string (15, '-') << endl;
+    sort (vParticipant.begin(), vParticipant.end(), compare2part);
+    affichVectParticipants(vParticipant);
+
+    // Vote majoritaire en deux tours :
+
+    //Votes du premier tour
+    vector<int> vCompteur (4,0); //4 glaces
+    for (const participant & part : vParticipant){
+        vCompteur[part.glacePref-1] += 1;
+    }
+    //Cas de la majorité absolue
+    bool majoriteAbsolue (false);
+    for (unsigned i (0); i < vCompteur.size(); ++i){
+        if (vCompteur[i] > vParticipant.size()/2){
+            majoriteAbsolue = true;
+            cout << "la glace élue est : " << vGlacePref[i] << endl;
+        }
+    }
+
+    //Cas sans majorité absolue
+    if (!majoriteAbsolue){
+        //Les deux glaces en tete
+        int max1 = 0;
+        int max2 = 0;
+        vector<int> vCompteur2 (2,0);
+        for (unsigned i (0); i < 4; i=i+1){
+            if (vCompteur[i] > max1){
+                max2 = max1;
+                max1 = vCompteur[i];
+            }
+            else if (vCompteur[i] > max2){
+                max2 = vCompteur[i];
+            }
+        }
+        
+        //On refait un comptage
+        for (const participant & part = vParticipant[i]; ){
+            if (vCompteur[part.glacePref-1] == max1)
+                vCompteur2[0] += 1;
+            else if (vCompteur[part.glacePref-1] == max2)
+                vCompteur2[1] += 1;
+        }
+        if (vCompteur2[0] > vCompteur2[1])
+            cout << "la glace élue est : " << vGlacePref[max1] << endl;
+        else if (vCompteur2[1] > vCompteur2[0])
+            cout << "la glace élue est : " << vGlacePref[max2] << endl;
+        else
+            cout << "Egalité entre les deux glaces en tête" << endl;
+
+    return 0;
+}

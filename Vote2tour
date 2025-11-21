@@ -122,8 +122,8 @@ int main()
     //Cas de la majorité absolue
     bool majoriteAbsolue (false);
     for (unsigned i (0); i < vCompteur.size(); ++i){
-        if (vCompteur[i] > vParticipant.size()/2){
-            majoriteAbsolue = true;
+        if (vCompteur[i] > vParticipant.size()/2){ // Si le nombre de voix est plus grand que le nombre de participants :
+            majoriteAbsolue = true; // il y a majorité
             cout << "la glace élue est : " << vGlacePref[i] << endl;
         }
     }
@@ -134,11 +134,11 @@ int main()
         int max1 = 0;
         int max2 = 0;
         for (unsigned i=1; i < 4; i=i+1){
-            if (vCompteur[i] > vCompteur[max1]){
-                max2 = max1;
+            if (vCompteur[i] > vCompteur[max1]){ // Si il y a plus de voix pour la glace courante que le max actuel
+                max2 = max1; // On met le max courant en second
                 max1 = i;
             }
-            else if (vCompteur[i] > vCompteur[max2]){
+            else if (vCompteur[i] > vCompteur[max2]){ // Cas ou les votes pour la glace courante seraient plus grands que le second maximum
                 max2 = i;
             }
         }

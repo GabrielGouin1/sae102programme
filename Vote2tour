@@ -2,10 +2,10 @@
 /**
  * @date 21/11/2025
  */
-void comptagedepoints (int vote)
+void comptagedepoints (int vote, int choix) //choix représentant nombre de glace
 {
     //tableau initialisé en dehors pour éviter que ce soit remis à 0 à chaque fois
-    for (int i =1; i<5; i++) //i=1 correspond au numéro de glace et inférieur à 5 pour compter jusqu'à 4.
+    for (int i =1; i<(choix+1); i++) //i=1 correspond au numéro de glace et inférieur au nombre de choix +1 pour pas en manquer une.
     {
         if (vote == i) //est-ce que le vote correspond au numéro de la glace
         {
@@ -30,14 +30,14 @@ int main()
         vGlacePref.push_back(litUneString());
     //tableau pour compter les votes pour chaque glace
     vector<int> compteurpoints (4,0);
-    
+
     /* debug */
     affichVectString (vGlacePref);
 
     //On lit les datas du clavier, et on les stocke
         vector<participant> vParticipant;
     //boucle premier tour
-    for (unsigned i (0); i < 116; ++i){
+    for (unsigned i (0); i < 117; ++i){
         string nom (litUneString());
         string prenom  (litUneString());
         int numGlace (litUnEntier());
@@ -47,23 +47,32 @@ int main()
         //vParticipant.push_back(participant{nom, prenom, numGlace});
               //  vJoueur[numEquipe-1].push_back(joueur {nom, prenom, numEquipe});
     }
-    
+
     //on récupère les deux meilleures glaces (le plus de vote)
-    //Nina l'a
-    
-    //et on le remet dans un nouveau tableau avec 2 entrée cette fois.
-    vector <string> vGlacePref;
-    for (unsigned i (0); i < 2; ++i)
+    int max1 = 0;
+    int max2 = 0;
+    for (unsigned i=1; i < 4; i=i+1){
+        if (vCompteur[i] > vCompteur[max1]){ // Si il y a plus de voix pour la glace courante que le max actuel
+            max2 = max1; // On met le max courant en second
+            max1 = i;
+        }
+        else if (vCompteur[i] > vCompteur[max2]){ // Cas ou les votes pour la glace courante seraient plus grands que le second maximum
+            max2 = i;
+        }
+
+    //et on le remet dans un nouveau tableau avec 2 entrée cette fois. ou on supprime voir TD10
+        vector <string> vGlacePref;
+     for (unsigned i (0); i < 2; ++i)
         vGlacePref.push_back(litUneString());
-    
-    
+
+
 
     //deuxième tour
     for (unsigned i (0); i < 117; ++i){
         string nom (litUneString());
         string prenom  (litUneString());
         int numGlace (litUnEntier());
-        comptagedepoints(numGlace);
+        comptagedepointstour2(numGlace);
         //cout << nom << endl << prenom << endl << numGlace << endl;
         //vParticipant.push_back(participant{nom, prenom, numGlace});
             //  vJoueur[numEquipe-1].push_back(joueur {nom, prenom, numEquipe});

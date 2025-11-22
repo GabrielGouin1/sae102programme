@@ -1,0 +1,120 @@
+// STATUS : MODIFICATION COMMENCEE NON TERMINE ------ /!\ A TERMINER /!\ ------
+
+// -------- /!\ VOIR COMMENTAIRE POUR INFO SUR LES MODIFICATION /!\ ------------------
+
+// MODIFICATION REALISEE LE 22/11 A 21H44
+
+/**
+ *  @date : 22 octobre 2024
+ *  @author : Alain Casali
+ *  @Brief : une prmière réponse à la SAE 1.02 de 24/25
+**/
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+/**
+ * @brief litUneString
+ * @return la chaine lue sauf si :
+ * (1) on une boulette sur l'entrée
+ * (2) on trouve un commentaire sur l'entrée
+ * le commentaire est matérialisé par la chaine "//"
+ */
+
+string litUneString (){
+    string uneChaine;
+    while (true){
+        getline (cin, uneChaine);
+        if ((!cin) || (uneChaine.substr(0,2) != "//")) break;
+    }
+    return uneChaine;
+}
+
+int litUnEntier (){
+    string uneChaine;
+    while (true){
+        getline (cin, uneChaine);
+        if ((!cin) || (uneChaine.substr(0,2) != "//")) break;
+    }
+    return stoi(uneChaine);
+}
+
+struct participant {
+    string nom;
+    string prenom;
+    int glacePref;
+    vector<unsigned> vGlacePoint;
+};
+
+bool compare2part (const participant & p1, const participant & p2){
+    return p1.prenom < p2.prenom;
+}
+
+void affichVectString (const vector<string> & v){
+    for (const string & val : v)
+        cout << val << '\t';
+    cout << endl;
+}
+
+void affichVectParticipants (const vector<participant> & vPart){
+    for (const participant & part : vPart){
+        cout << part.nom << endl;
+        cout << part.prenom << endl;
+        cout << part.glacePref << endl;
+
+        // On utilise une deuxième boucle for pour afficher les points
+        for (unsigned point : part.vGlacePoint){
+            cout << point << ' '; // on affiche tout les points pour chaque glaces avec des espaces pour rendre plus clair
+        }
+    }
+}
+
+int main()
+{
+    //cout << "Hello World!" << endl;
+    //vector<participant> vParticipant (19);
+    /* on va detecter les glaces preférées des votants
+    * tout en virant les commentaires
+    */
+    
+    unsigned NB_Glace = 4;
+    unsigned NB_Participant = 116;
+    vector<string> vGlacePref = {"Choco", "Banane", "Mangue", "Fraises"}; 
+
+    /* on vote sur 4 glaces */
+    vector <string> vGlacePref;
+    for (unsigned i (0); i < 4; ++i)
+        vGlacePref.push_back(litUneString());
+
+    /* debug */
+    affichVectString (vGlacePref);
+
+    //On lit les datas du clavier, et on les stocke
+    vector<participant> vParticipant;
+
+    for (unsigned i (0); i < 10; ++i){
+        participant p; // On créer un participant temporaire pour faciliter l'écriture du code
+        string nom(litUneString());
+        string prenom(litUneString());
+        int numGlace(litUnEntier());
+        cout << nom << endl << prenom << endl << numGlace << endl;
+        // On utilise une deuxième boucle for pour pouvoir lire les 5 points attribués au glaces
+        for (unsigned j(0); j < 4; j = j + 1){
+            p.vGlacePoint.push_back(litUnEntier()); // On lit 5 entier de plus
+        }
+        vParticipant.push_back(p);
+
+        //vParticipant.push_back(participant{nom, prenom, numGlace});
+        //vJoueur[numEquipe-1].push_back(joueur {nom, prenom, numEquipe});
+    }
+
+    affichVectParticipants(vParticipant);
+    cout << string (15, '-') << endl;
+    sort (vParticipant.begin(), vParticipant.end(), compare2part);
+    affichVectParticipants(vParticipant);
+
+    cout << "c'est la glace " << vGlacePref[0] << " qui a gagne avec un total de : " << endl;
+    return 0;
+}

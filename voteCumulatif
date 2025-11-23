@@ -60,10 +60,12 @@ void affichVectParticipants (const vector<participant> & vPart){
         cout << part.prenom << endl;
         cout << part.glacePref << endl;
 
+        /*            // A ENLEVER OU NON SELON SI LE CODE FONCTIONNE BIEN AVEC OU SANS 
         // On utilise une deuxième boucle for pour afficher les points
         for (unsigned point : part.vGlacePoint){
             cout << point << ' '; // on affiche tout les points pour chaque glaces avec des espaces pour rendre plus clair
         }
+        */
     }
 }
 

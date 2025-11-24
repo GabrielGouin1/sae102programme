@@ -68,17 +68,21 @@ void affichVectParticipants (const vector<participant> & vPart){
 // On créer une nouvelle fonction nommé score pour pouvoir calculer le score final
 // On met donc en parametres le tableau participant en in mais aussi un deuxième tableau nommé vGlaces en in
 void score (const vector<participant> & vPart, const vector<string> & vGlaces) {
-    // On initialise tout d'abord le le score final a 0
-    // L'indice dans le tableau du score correspond à l'indice de la glace dans le tableau vGlaces
-    // On créer donc un tableau nommé score qui va prendre comme nombres d'indices la taille de notre tableau vGlaces mais
-    // qui va prendre comme valeur 0
+    /*
+    On initialise tout d'abord le le score final a 0
+    L'indice dans le tableau du score correspond à l'indice de la glace dans le tableau vGlaces
+    On créer donc un tableau nommé score qui va prendre comme nombres d'indices la taille de notre tableau vGlaces mais
+    qui va prendre comme valeur 0
+    */
     vector<unsigned> scores(vGlaces.size(), 0);
 
-    // On utilise ensuite une boucle for pour pouvoir lire tout les participants
-    // Dans cette boucle for, on va parcourir tout le tableau participants pour pouvoir lire toutes les valeurs dedans
-    // on utilise part comme reference (le signe &) dans la boucle pour simplifier l'écriture du code
-    // Enfin : vPart signifie qu'on va parcourir tout les elements du tableau vPart c'est à dire dans la fonction juste au dessus part.nom
-    // part.prenom, part.glacePref et part.vGlacePoint. On va recuperer chaque valeur.
+    /*
+     On utilise ensuite une boucle for pour pouvoir lire tout les participants
+     Dans cette boucle for, on va parcourir tout le tableau participants pour pouvoir lire toutes les valeurs dedans
+     on utilise part comme reference (le signe &) dans la boucle pour simplifier l'écriture du code
+     Enfin : vPart signifie qu'on va parcourir tout les elements du tableau vPart c'est à dire dans la fonction juste au dessus part.nom
+    part.prenom, part.glacePref et part.vGlacePoint. On va recuperer chaque valeur.
+    */
     for (const participant & part : vPart) {
         // On utilise par la suite une deuxième boucle pour pouvoir ajouter maintenant les points que chaque participant ont donnés aux différentes glaces
         for (unsigned i = 0; i < vGlaces.size(); i = i + 1) {
@@ -90,14 +94,15 @@ void score (const vector<participant> & vPart, const vector<string> & vGlaces) {
             }
         }
     }
-
-    // On cherche maintenant qui est le gagnant
-    // On créer un tableau pour les pointMax, scores est un tableau de nombre entier qui va venir stocker le nombre de points
-    // totaux pour chaque parfum de glace.
-    // On utilise score.begin() car celui-ci renvoie le premier indice qui va venir récupérer la première glace
-    // score.end() fait pareil mais inversement c'est à dire prende le dernier indice du tableau donc la dernière glace
-    // max_element(fait partie de la librairie "algorithme", il renvoie tout simplement l'élèment le plus grand (ici donc entre le premier indice et le dernier)
-    // L'utilisation de ::iterator permet de venir récuperer les autres glaces dans le tableau entre ducoup le premier indice et le dernier (entre la première et la deuxième glace)
+    /*
+    On cherche maintenant qui est le gagnant
+    On créer un tableau pour les pointMax, scores est un tableau de nombre entier qui va venir stocker le nombre de points
+    totaux pour chaque parfum de glace.
+    On utilise score.begin() car celui-ci renvoie le premier indice qui va venir récupérer la première glace
+    score.end() fait pareil mais inversement c'est à dire prende le dernier indice du tableau donc la dernière glace
+    max_element(fait partie de la librairie "algorithme", il renvoie tout simplement l'élèment le plus grand (ici donc entre le premier indice et le dernier)
+    L'utilisation de ::iterator permet de venir récuperer les autres glaces dans le tableau entre ducoup le premier indice et le dernier (entre la première et la deuxième glace)
+    */
     vector<unsigned>::iterator pointMax = max_element(scores.begin(), scores.end());
     int gagnant = scores.begin() - pointMax; // On calcule l'indice de l'element dans le tableau des glaces avec une soustraction
     // On récupère le parfum qui a gagné avec son nombre de point total

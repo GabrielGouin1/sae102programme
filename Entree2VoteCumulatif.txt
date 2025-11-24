@@ -13,7 +13,7 @@ ACEMYAN DE OLIVEIRA
 Ewan
 3 pts : Choco
 2 pts : Banane
-ACH                  
+ACH                  
 Sofia
 2 pts : Mangue
 3 pts : Banane
@@ -107,7 +107,7 @@ BOUACHERIA-KEBIR
 Imed
 2 pts : Fraises
 3 pts : Banane
-BOUDHIB        
+BOUDHIB        
 Mohamed-Amine
 2 pts : Choco
 3 pts : Mangue
@@ -143,11 +143,11 @@ CLOT-GODARD
 Kenji
 2 pts : Fraises
 3 pts : Banane
-CONTRUCCI    
+CONTRUCCI    
 Lou
 2 pts : Choco
 3 pts : Mangue
-CORDOVANA    
+CORDOVANA    
 Enzo
 1 pts : Banane
 4 pts : Fraises
@@ -220,7 +220,7 @@ FALFERI
 Angelo
 3 pts : Fraises
 2 pts : Mangue
-FAUTSCH        
+FAUTSCH        
 Mathis
 2 pts : Choco
 3 pts : Banane
@@ -292,7 +292,7 @@ KOLIAI
 Hamza
 2 pts : Fraises
 3 pts : Mangue
-KUROPATWA-BUTTE  
+KUROPATWA-BUTTE  
 Adam
 2 pts : Banane
 3 pts : Fraises
@@ -312,7 +312,7 @@ LEPAPE
 Lucas
 2 pts : Choco
 3 pts : Banane
-MAILHE    
+MAILHE    
 Gustin
 2 pts : Fraises
 3 pts : Mangue
@@ -336,7 +336,7 @@ MEJEAN
 Oriane
 2 pts : Choco
 3 pts : Banane
-MEKIDICHE        
+MEKIDICHE        
 Idris
 3 pts : Fraises
 2 pts : Choco
@@ -416,7 +416,7 @@ ROFFIDAL
 Ambre
 3 pts : Choco
 2 pts : Fraises
-ROMBI          
+ROMBI          
 Matis
 2 pts : Banane
 3 pts : Mangue

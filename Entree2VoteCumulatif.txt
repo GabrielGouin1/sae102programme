@@ -1,0 +1,474 @@
+//liste des glaces
+Choco
+Banane
+Mangue
+Fraises
+//voila la liste des joueurs, ils ont 5 points a distribuer
+//et encore un autre commentaire
+AROUSSI BENTATA
+Adam
+3 pts : Fraises
+2 pts : Choco
+ACEMYAN DE OLIVEIRA
+Ewan
+3 pts : Choco
+2 pts : Banane
+ACH                  
+Sofia
+2 pts : Mangue
+3 pts : Banane
+AGGAB
+Mohammed
+1 pts : Choco
+3 pts : Fraises
+1 pts : Mangue
+AHAMED
+Nasser
+5 pts : Mangue
+ALLARD
+Loan
+2 pts : Mangue
+3 pts : Choco
+AMARA
+Sinda
+3 pts : Choco
+2 pts : Mangue
+AMROUNE
+Akim
+2 pts : Banane
+3 pts : Fraises
+ANTOINE
+Thomas
+1 pts : Choco
+4 pts : Mangue
+ARBADJI
+Maxime
+2 pts : Banane
+3 pts : Choco
+ARBOUZ
+Iklil
+3 pts : Fraises
+2 pts : Banane
+ARFI
+Maxime
+1 pts : Mangue
+4 pts : Choco
+ARSENA
+Claire
+2 pts : Choco
+3 pts : Fraises
+ATHERLY
+Evan
+3 pts : Mangue
+2 pts : Choco
+AZOUG
+Kylian
+4 pts : Banane
+1 pts : Fraises
+BAGNIS
+Enzo
+3 pts : Choco
+2 pts : Fraises
+BARBERIS
+Alexis
+1 pts : Fraises
+2 pts : Mangue
+2 pts : Choco
+BAURENS - TORRENTE
+Valentin
+3 pts : Mangue
+2 pts : Banane
+BEN GADHA
+Imen
+3 pts : Fraises
+2 pts : Choco
+BEN SALEM
+Mohamed
+2 pts : Banane
+3 pts : Mangue
+BENAHMED
+Younes
+2 pts : Mangue
+3 pts : Banane
+BENHAFESSA
+Alexandre
+1 pts : Choco
+3 pts : Banane
+1 pts : Mangue
+BILLUART
+Florian
+4 pts : Choco
+1 pts : Mangue
+BORSOTTO
+Antonin
+2 pts : Mangue
+3 pts : Choco
+BOUACHERIA-KEBIR
+Imed
+2 pts : Fraises
+3 pts : Banane
+BOUDHIB        
+Mohamed-Amine
+2 pts : Choco
+3 pts : Mangue
+BOUDIA--THOMAS
+Akcyl
+1 pts : Banane
+4 pts : Choco
+BOUGHERARA
+Adam
+3 pts : Mangue
+2 pts : Fraises
+BREST-LESTRADE
+Hugo
+4 pts : Fraises
+1 pts : Banane
+BURBECK
+Heather
+2 pts : Mangue
+3 pts : Banane
+CANTOR
+Romain
+2 pts : Choco
+3 pts : Fraises
+CELESTINE
+Samuel
+3 pts : Banane
+2 pts : Choco
+CHETIOUI
+Willem
+1 pts : Mangue
+4 pts : Banane
+CLOT-GODARD
+Kenji
+2 pts : Fraises
+3 pts : Banane
+CONTRUCCI    
+Lou
+2 pts : Choco
+3 pts : Mangue
+CORDOVANA    
+Enzo
+1 pts : Banane
+4 pts : Fraises
+COULPOTIN
+Evan
+2 pts : Mangue
+3 pts : Choco
+CRESPO - MICHAILIDIS
+Dimitri
+3 pts : Banane
+2 pts : Fraises
+CURNIER
+Anthony
+1 pts : Choco
+4 pts : Banane
+DAHMOUCHE
+Wissem
+2 pts : Mangue
+3 pts : Choco
+DAOUAYRY
+Sofian
+3 pts : Fraises
+2 pts : Mangue
+DARGENTOLLE
+Francois
+2 pts : Banane
+3 pts : Fraises
+DECAMPS
+Lou
+2 pts : Mangue
+3 pts : Choco
+DEMANGE
+Martin
+3 pts : Fraises
+2 pts : Choco
+DIAZ
+Gwenn
+4 pts : Banane
+1 pts : Fraises
+DRIOUCHI
+Mohamed
+2 pts : Mangue
+3 pts : Banane
+DUMONT
+Aline
+1 pts : Fraises
+2 pts : Choco
+2 pts : Mangue
+EDELSTEIN
+William
+3 pts : Banane
+2 pts : Fraises
+EL FAHSSI
+Hicham
+2 pts : Mangue
+3 pts : Choco
+EL HABRIRI
+Samy
+4 pts : Mangue
+1 pts : Banane
+EL KASSOUF
+Simon
+3 pts : Banane
+2 pts : Fraises
+FABRE
+Alexis
+2 pts : Mangue
+3 pts : Choco
+FALFERI
+Angelo
+3 pts : Fraises
+2 pts : Mangue
+FAUTSCH        
+Mathis
+2 pts : Choco
+3 pts : Banane
+FERRAT
+Jibril
+2 pts : Banane
+3 pts : Fraises
+FUSELIER
+Jules
+1 pts : Choco
+4 pts : Mangue
+GHEUX
+Theo
+2 pts : Banane
+3 pts : Choco
+GIUSIANO
+Eloise
+1 pts : Fraises
+4 pts : Mangue
+GRIGUER
+Nathan
+2 pts : Choco
+3 pts : Fraises
+GUDENSCHWAGER
+Oliver
+1 pts : Mangue
+4 pts : Banane
+GUL
+Furkan
+3 pts : Choco
+2 pts : Mangue
+GUZELBABA
+Imran
+2 pts : Fraises
+3 pts : Choco
+HADDAD
+Mohamed-Amine
+2 pts : Mangue
+3 pts : Banane
+HELALI
+Amin
+4 pts : Banane
+1 pts : Fraises
+HENG
+Hugo
+3 pts : Choco
+2 pts : Fraises
+HERNANDEZ
+Loic
+2 pts : Mangue
+3 pts : Choco
+HU
+Swan
+3 pts : Fraises
+2 pts : Banane
+JACOB
+Alexandre
+1 pts : Choco
+4 pts : Mangue
+KAMARA
+Demba
+3 pts : Banane
+2 pts : Fraises
+KAMARZINE
+Aurelien
+1 pts : Mangue
+4 pts : Choco
+KOLIAI
+Hamza
+2 pts : Fraises
+3 pts : Mangue
+KUROPATWA-BUTTE  
+Adam
+2 pts : Banane
+3 pts : Fraises
+LACORRE
+Axel
+3 pts : Mangue
+2 pts : Choco
+LAURIOL-TORCQc
+Mathis
+1 pts : Choco
+4 pts : Banane
+LE DENMAT
+Pierre
+2 pts : Fraises
+3 pts : Mangue
+LEPAPE
+Lucas
+2 pts : Choco
+3 pts : Banane
+MAILHE    
+Gustin
+2 pts : Fraises
+3 pts : Mangue
+MARCHITTO
+Ilian
+1 pts : Mangue
+4 pts : Choco
+MARCUS
+William
+3 pts : Banane
+2 pts : Fraises
+MEFTAHI
+Mohamed
+2 pts : Mangue
+3 pts : Choco
+MEGNOUCHE
+Riad
+1 pts : Fraises
+4 pts : Mangue
+MEJEAN
+Oriane
+2 pts : Choco
+3 pts : Banane
+MEKIDICHE        
+Idris
+3 pts : Fraises
+2 pts : Choco
+NAHI
+Amine
+1 pts : Choco
+4 pts : Banane
+NEIRA
+Leandro
+2 pts : Fraises
+3 pts : Mangue
+NEPOTU
+Gheorghe
+3 pts : Choco
+2 pts : Banane
+NGOM
+Magueye
+4 pts : Mangue
+1 pts : Fraises
+NOIRET
+Maxime
+2 pts : Choco
+3 pts : Fraises
+ORLANDI
+Lenny
+3 pts : Mangue
+2 pts : Banane
+PANAIVA
+Jeremy
+2 pts : Fraises
+3 pts : Choco
+PALOT
+Thomas
+1 pts : Banane
+4 pts : Mangue
+PIBOULEAU
+Jean-Baptiste
+2 pts : Choco
+3 pts : Banane
+POGHOSSIAN
+Mariam
+2 pts : Mangue
+3 pts : Fraises
+QUILLIEC
+Matisse
+3 pts : Banane
+2 pts : Mangue
+RADJOU
+Dinesh
+2 pts : Choco
+3 pts : Mangue
+RAPANAKIS-BOURG
+Marius
+3 pts : Fraises
+2 pts : Mangue
+RATIANANAHARY
+Karmen
+1 pts : Banane
+4 pts : Choco
+REGNIER
+Vassili
+2 pts : Banane
+3 pts : Fraises
+RIBBE
+Jules
+3 pts : Mangue
+2 pts : Choco
+RINALDI
+Antoine
+2 pts : Fraises
+3 pts : Mangue
+RIVA KARAKA ABDEREMANE
+Imric
+1 pts : Mangue
+4 pts : Banane
+ROFFIDAL
+Ambre
+3 pts : Choco
+2 pts : Fraises
+ROMBI          
+Matis
+2 pts : Banane
+3 pts : Mangue
+SAADI
+Ismail
+4 pts : Fraises
+1 pts : Choco
+SANTOS JORGE
+Francisco
+2 pts : Choco
+3 pts : Fraises
+SENE
+Pablo
+3 pts : Mangue
+2 pts : Choco
+SISE
+Aboubakar
+4 pts : Banane
+1 pts : Mangue
+STEFANOVITCH
+Ilann
+2 pts : Choco
+3 pts : Banane
+TAHA CHAOUI
+Amir
+3 pts : Fraises
+2 pts : Mangue
+TORCHIN
+Maxence
+1 pts : Fraises
+4 pts : Mangue
+TORO
+Esteban
+2 pts : Banane
+3 pts : Choco
+TRAIKIA
+Rayane
+2 pts : Fraises
+3 pts : Mangue
+UYSUN
+Ali
+1 pts : Choco
+4 pts : Mangue
+VALETTE
+Lilian
+3 pts : Fraises
+2 pts : Banane
+WATRIPONT
+Jeremy
+2 pts : Mangue
+3 pts : Banane
+ZEGGANE
+Sofien
+3 pts : Choco
+2 pts : Fraises

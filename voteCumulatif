@@ -96,14 +96,14 @@ void score (const vector<participant> & vPart, const vector<string> & vGlaces) {
     // totaux pour chaque parfum de glace.
     // On utilise score.begin() car celui-ci renvoie le premier indice qui va venir récupérer la première glace
     // score.end() fait pareil mais inversement c'est à dire prende le dernier indice du tableau donc la dernière glace
-    // max_element(fait partie de la librairie "algorithme" renvoie tout simplement l'élèment le plus grand (ici donc entre le premier indice et le dernier)
+    // max_element(fait partie de la librairie "algorithme", il renvoie tout simplement l'élèment le plus grand (ici donc entre le premier indice et le dernier)
     // L'utilisation de ::iterator permet de venir récuperer les autres glaces dans le tableau entre ducoup le premier indice et le dernier (entre la première et la deuxième glace)
     vector<unsigned>::iterator pointMax = max_element(scores.begin(), scores.end());
     int gagnant = scores.begin() - pointMax; // On calcule l'indice de l'element dans le tableau des glaces avec une soustraction
     // On récupère le parfum qui a gagné avec son nombre de point total
-    string nomGagnant = vGlaces[gagnant];
-    unsigned scoreGagnant = *pointMax;
-
+    string nomGagnant = vGlaces[gagnant]; // On récupère l'indice du parfum qui a gagnee
+    unsigned scoreGagnant = *pointMax; // On met une etoile avant la pointMax pour indiquer que celui n'est pas dans le vecteur (n'est pas un element du vecteur)
+    // Il s'agit plutot d'un pointeur qui va donc venir ici designer le score de la glace qui a gagnee
     // On affiche le parfum qui a gagné
     cout << "C'est la glace " << nomGagnant << " qui gagne avec " << scoreGagnant << " points !";
 }

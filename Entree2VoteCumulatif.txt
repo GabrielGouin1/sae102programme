@@ -27,8 +27,8 @@ Nasser
 5 pts : Mangue
 ALLARD
 Loan
-2 pts : Mangue
-3 pts : Choco
+3 pts : Mangue
+2 pts : Choco
 AMARA
 Sinda
 3 pts : Choco
@@ -97,8 +97,8 @@ Alexandre
 1 pts : Mangue
 BILLUART
 Florian
-4 pts : Choco
-1 pts : Mangue
+1 pts : Choco
+4 pts : Mangue
 BORSOTTO
 Antonin
 2 pts : Mangue
@@ -193,8 +193,8 @@ Mohamed
 3 pts : Banane
 DUMONT
 Aline
-1 pts : Fraises
-2 pts : Choco
+2 pts : Fraises
+1 pts : Choco
 2 pts : Mangue
 EDELSTEIN
 William
@@ -210,8 +210,8 @@ Samy
 1 pts : Banane
 EL KASSOUF
 Simon
-3 pts : Banane
-2 pts : Fraises
+2 pts : Banane
+3 pts : Fraises
 FABRE
 Alexis
 2 pts : Mangue

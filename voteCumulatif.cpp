@@ -1,7 +1,7 @@
 /**
  *  @date : 22 octobre 2024
  *  @author : Alain Casali et groupe 2 G1
- *  @Brief : vote 2 tour de la SAE 1.02 de 25/26
+ *  @Brief : vote cumulatif
 **/
 #include <iostream>
 #include <vector>

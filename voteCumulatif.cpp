@@ -1,7 +1,7 @@
 /**
  *  @date : 22 octobre 2024
  *  @author : Alain Casali et groupe 2 G1
- *  @Brief : vote cumulatif
+ *  @Brief : vote 2 tour de la SAE 1.02 de 25/26
 **/
 #include <iostream>
 #include <vector>
@@ -68,7 +68,7 @@ void enregistrePart (vector<participant> & vPart){
     for (unsigned i (0); i < 116; ++i){
         string nom (litUneString());
         string prenom  (litUneString());
-        vector<unsigned> vGlace;
+        vector<unsigned> vGlace(4, 0);
         for (unsigned j(0); j < 4; j = j + 1){
             vGlace[j] = litUnEntier();
         }
@@ -79,7 +79,6 @@ void enregistrePart (vector<participant> & vPart){
 
 int main()
 {
-    cout << "BONJOUR";
     /* on vote sur 4 glaces */
     vector<string> vGlacePref;
     for (unsigned i=0; i < 4; i=i+1)
@@ -97,12 +96,12 @@ int main()
             vCompteur[i] += participant.vGlacePoint[i]; // rajoute 1 pour le num de la glace qui est entre 1 et 4 donc on enleve 1
         }
     }
-    cout << "Compteur Choco : " << vCompteur[0] << "   Compteur pour Fraises : " << vCompteur[1] << "   Compteur pour Banane : " << vCompteur[2] << "   Compteur pour Mangue : " << vCompteur[3] << endl;
+    //cout << "Compteur Choco : " << vCompteur[0] << "   Compteur pour Fraises : " << vCompteur[1] << "   Compteur pour Banane : " << vCompteur[2] << "   Compteur pour Mangue : " << vCompteur[3] << endl;
 
     //On annonce le résultat final :
     int elu = 0;
     for (unsigned i=0; i < vCompteur.size(); i=i+1){
-        if (elu > vCompteur[i]){
+        if (vCompteur[i] > elu){
             elu = vCompteur[i];
         }
     }

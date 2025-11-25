@@ -103,12 +103,11 @@ int main()
     //cout << "Compteur Choco : " << vCompteur[0] << "   Compteur pour Fraises : " << vCompteur[1] << "   Compteur pour Banane : " << vCompteur[2] << "   Compteur pour Mangue : " << vCompteur[3] << endl;
 
     //On annonce le résultat final :
-    if (vCompteur2[0] > vCompteur2[1])
-        cout << "la glace élue est : " << vGlacePref[max1] << endl;
-    else if (vCompteur2[1] > vCompteur2[0])
-        cout << "la glace élue est : " << vGlacePref[max2] << endl;
-    else
-        cout << "Egalité entre les deux glaces en tête" << endl;
+    int elu = 0;
+    for (unsigned i=0; i < vCompteur.size(); i=i+1){
+        if (elu > vCompteur[i])
+            elu = vCompteur[i];
     }
-    return 0;
+    cout << "la glace élue est : " << vGlacePref[elu] << endl;
+
 }

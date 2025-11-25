@@ -78,7 +78,7 @@ int main()
 {
     /* on vote sur 4 glaces */
     vector<string> vGlacePref;
-    for (unsigned i=0; i < 4; i=i+1)
+    for (unsigned i=0; i < 4; ++i)
         vGlacePref.push_back(litUneString());
     //affichVectString(vGlacePref);
 

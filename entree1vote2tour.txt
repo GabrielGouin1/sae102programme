@@ -4,7 +4,6 @@ Banane
 Mangue
 Fraises
 //voila la liste des joueurs
-//et encore un autre commentaire
 AROUSSI BENTATA
 Adam
 1
@@ -354,8 +353,7 @@ ZEGGANE
 Sofien
 4
 //FINPREMIERTOUR
-//voila la liste des joueurs
-//et encore un autre commentaire
+//voila la liste des joueurs du tour 2
 AROUSSI BENTATA
 Adam
 1

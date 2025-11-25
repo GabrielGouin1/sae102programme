@@ -93,10 +93,12 @@ int main()
 
     //------Vote majoritaire en deux tours :
 
-    //Votes du premier tour
+    //On comptabilise les votes grace a une boucle imbriquée et un compteur
     vector<int> vCompteur (4,0); //4 glaces
-    for (const participant & participant : vParticipant){ //boucle qui passe pour chaque participants du vecteur
-        vCompteur[participant.glacePref-1] += 1; // rajoute 1 pour le num de la glace qui est entre 1 et 4 donc on enleve 1
+    for (const participant & participant : vParticipant){ //boucle qui passe pour chaque participants du vecteur participants
+        for(unsigned i=0; i < 4; i=i+1){  // boucle qui passe les glaces une a une 
+            vCompteur[i] += participant.vGlacePref[i]; // rajoute 1 pour le num de la glace qui est entre 1 et 4 donc on enleve 1
+        }
     }
     //cout << "Compteur Choco : " << vCompteur[0] << "   Compteur pour Fraises : " << vCompteur[1] << "   Compteur pour Banane : " << vCompteur[2] << "   Compteur pour Mangue : " << vCompteur[3] << endl;
 

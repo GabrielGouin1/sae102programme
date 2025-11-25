@@ -100,9 +100,9 @@ int main()
 
     //On annonce le résultat final :
     int elu = 0;
-    for (unsigned i=0; i < vCompteur.size(); i=i+1){
-        if (vCompteur[i] > elu){
-            elu = vCompteur[i];
+    for (unsigned i=1; i < vCompteur.size(); i=i+1){
+        if (vCompteur[i] > vCompteur[elu]){
+            elu = i;
         }
     }
     cout << "la glace élue est : " << vGlacePref[elu] << endl;

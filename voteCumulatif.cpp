@@ -1,7 +1,7 @@
 /**
- *  @date : 23 Novembre 2025
- *  @author : FRANCOIS Ewan
- *  @Brief : Modification du code pour le système de vote cumulatif
+ *  @date : 22 octobre 2024
+ *  @author : Alain Casali et groupe 2 G1
+ *  @Brief : vote 2 tour de la SAE 1.02 de 25/26
 **/
 #include <iostream>
 #include <vector>
@@ -17,6 +17,7 @@ using namespace std;
  * le commentaire est matérialisé par la chaine "//"
  */
 
+
 string litUneString (){
     string uneChaine;
     while (true){
@@ -25,6 +26,7 @@ string litUneString (){
     }
     return uneChaine;
 }
+
 
 int litUnEntier (){
     string uneChaine;
@@ -38,8 +40,7 @@ int litUnEntier (){
 struct participant {
     string nom;
     string prenom;
-    int glacePref;
-    vector<unsigned> vGlacePoint;
+    vector<unsigned> vGlacePoint; // --------------- vecteur ajouté pour le nb de points
 };
 
 bool compare2part (const participant & p1, const participant & p2){
@@ -56,104 +57,55 @@ void affichVectParticipants (const vector<participant> & vPart){
     for (const participant & part : vPart){
         cout << part.nom << endl;
         cout << part.prenom << endl;
-        cout << part.glacePref << endl;
-
-        // On utilise une deuxième boucle for pour afficher les points donnée à chaque glaces
-        for (unsigned point : part.vGlacePoint){
-            cout << point << ' '; // on affiche tout les points pour chaque glaces avec des espaces pour rendre plus clair
-        }
     }
 }
 
-// On créer une nouvelle fonction nommé score pour pouvoir calculer le score final
-// On met donc en parametres le tableau participant en in mais aussi un deuxième tableau nommé vGlaces en in
-void score (const vector<participant> & vPart, const vector<string> & vGlaces) {
-    /*
-    On initialise tout d'abord le le score final a 0
-    L'indice dans le tableau du score correspond à l'indice de la glace dans le tableau vGlaces
-    On créer donc un tableau nommé score qui va prendre comme nombres d'indices la taille de notre tableau vGlaces mais
-    qui va prendre comme valeur 0
-    */
-    vector<unsigned> scores(vGlaces.size(), 0);
+//--------------------------CODE MODIFIE-------------------------------------
+//On a ajouté au struct un vecteur qui compte le nb de pts par glace
 
-    /*
-     On utilise ensuite une boucle for pour pouvoir lire tout les participants
-     Dans cette boucle for, on va parcourir tout le tableau participants pour pouvoir lire toutes les valeurs dedans
-     on utilise part comme reference (le signe &) dans la boucle pour simplifier l'écriture du code
-     Enfin : vPart signifie qu'on va parcourir tout les elements du tableau vPart c'est à dire dans la fonction juste au dessus part.nom
-    part.prenom, part.glacePref et part.vGlacePoint. On va recuperer chaque valeur.
-    */
-    for (const participant & part : vPart) {
-        // On utilise par la suite une deuxième boucle pour pouvoir ajouter maintenant les points que chaque participant ont donnés aux différentes glaces
-        for (unsigned i = 0; i < vGlaces.size(); i = i + 1) {
-            // On vérifie bien que la taille de vGlaces correspond bien aux nombres de glaces qu'on a dans le fichier d'entrée
-            if (i < part.vGlacePoint.size()) {
-                scores[i] = scores[i] + part.vGlacePoint[i];
-                // Si la taille correspond bien aux nombres de glaces qu'on a dans le fichier d'entrée,
-                // On ajoute le point que le participant a donné a la glace pour laquelle il a voté
-            }
+// on va detecter les glaces preférées des votants tout en virant les commentaires
+void enregistrePart (vector<participant> & vPart){
+    for (unsigned i (0); i < 116; ++i){
+        string nom (litUneString());
+        string prenom  (litUneString());
+        vector<unsigned> vGlace;
+        for (unsigned j(0); j < 4; j = j + 1){
+            vGlace[j] = litUnEntier();
         }
+        vPart.push_back(participant{nom, prenom, vGlace});
+        //cout << nom << endl << prenom << endl << numGlace << endl << "NUMERO :" << i << endl;
     }
-    /*
-    On cherche maintenant qui est le gagnant
-    On créer un tableau pour les pointMax, scores est un tableau de nombre entier qui va venir stocker le nombre de points
-    totaux pour chaque parfum de glace.
-    On utilise score.begin() car celui-ci renvoie le premier indice qui va venir récupérer la première glace
-    score.end() fait pareil mais inversement c'est à dire prende le dernier indice du tableau donc la dernière glace
-    max_element(fait partie de la librairie "algorithme", il renvoie tout simplement l'élèment le plus grand (ici donc entre le premier indice et le dernier)
-    L'utilisation de ::iterator permet de venir récuperer les autres glaces dans le tableau entre ducoup le premier indice et le dernier (entre la première et la deuxième glace)
-    */
-    vector<unsigned>::iterator pointMax = max_element(scores.begin(), scores.end());
-    int gagnant = scores.begin() - pointMax; // On calcule l'indice de l'element dans le tableau des glaces avec une soustraction
-    // On récupère le parfum qui a gagné avec son nombre de point total
-    string nomGagnant = vGlaces[gagnant]; // On récupère l'indice du parfum qui a gagnee
-    unsigned scoreGagnant = *pointMax; // On met une etoile avant la pointMax pour indiquer que celui n'est pas dans le vecteur (n'est pas un element du vecteur)
-    // Il s'agit plutot d'un pointeur qui va donc venir ici designer le score de la glace qui a gagnee
-    // On affiche le parfum qui a gagné
-    cout << "C'est la glace " << nomGagnant << " qui gagne avec " << scoreGagnant << " points !";
 }
 
 int main()
 {
-
-    vector<string> vglacepref = {"Choco", "Banane", "Mangue", "Fraises"};
-    unsigned nbGlaces = vglacepref.size(); // Ajout de la variable nombre glace qui récupère la taille (nombre de glaces) du tableau vglacepref
-
+    cout << "BONJOUR";
     /* on vote sur 4 glaces */
-    vector <string> vGlacePref;
-    for (unsigned i (0); i < 4; ++i)
+    vector<string> vGlacePref;
+    for (unsigned i=0; i < 4; i=i+1)
         vGlacePref.push_back(litUneString());
+    //affichVectString(vGlacePref);
 
-    /* debug */
-    // affichVectString (vGlacePref);
-
-    //On lit les datas du clavier, et on les stocke
+    //On lit les datas du clavier, et on les stocke :
     vector<participant> vParticipant;
+    enregistrePart(vParticipant);
 
-    for (unsigned i (0); i < 10; ++i){
-        // ENLEVER LE COMMENTAIRE DE PARTICIPANT P SI LORS DE LA COMPILATION CA NE MARCHE PAS
-        //participant p; // On rajout juste dans le struct participant la lettre p pour pouvoir faciliter l'écriture du code
-        string nom(litUneString());
-        string prenom(litUneString());
-        int numGlace(litUnEntier());
-        //cout << nom << endl << prenom << endl << numGlace << endl;
-
-        // On utilise une deuxième boucle for pour pouvoir lire les 5 points attribués a chaque glaces
-        for (unsigned j(0); j < nbGlaces; j = j + 1){
-            participant.vGlacePoint.push_back(litUnEntier()); // On lit sur le fichier d'entrée combien de points ont les glaces
+    //On comptabilise les votes grace a une boucle imbriquée et un compteur
+    vector<int> vCompteur (4,0); //4 glaces
+    for (const participant & participant : vParticipant){ //boucle qui passe pour chaque participants du vecteur participants
+        for(unsigned i=0; i < 4; i=i+1){  // boucle qui passe les glaces une a une
+            vCompteur[i] += participant.vGlacePoint[i]; // rajoute 1 pour le num de la glace qui est entre 1 et 4 donc on enleve 1
         }
-        vParticipant.push_back(participant);
-
-        //vParticipant.push_back(participant{nom, prenom, numGlace});
-        //vJoueur[numEquipe-1].push_back(joueur {nom, prenom, numEquipe});
     }
+    cout << "Compteur Choco : " << vCompteur[0] << "   Compteur pour Fraises : " << vCompteur[1] << "   Compteur pour Banane : " << vCompteur[2] << "   Compteur pour Mangue : " << vCompteur[3] << endl;
 
-    // On affiche enfin la glace qui a gagnée
-    affichVectParticipants(vParticipant); // On appelle la fonction affiche vect, avec la modification de celle ci qui va pouvoir maintenant nous afficher aussi le score des glaces
-    cout << string (15, '-') << endl;
-    sort (vParticipant.begin(), vParticipant.end(), compare2part);
-    affichVectParticipants(vParticipant);
-    score(vParticipant, vGlacePref); // On appelle donc la fonction score pour calculer le score total et afficher qui est le gagnant
+    //On annonce le résultat final :
+    int elu = 0;
+    for (unsigned i=0; i < vCompteur.size(); i=i+1){
+        if (elu > vCompteur[i]){
+            elu = vCompteur[i];
+        }
+    }
+    cout << "la glace élue est : " << vGlacePref[elu] << endl;
 
-    return 0;
 }

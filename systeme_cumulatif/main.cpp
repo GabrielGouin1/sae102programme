@@ -69,7 +69,7 @@ void enregistrePart (vector<participant> & vPart){
         string nom (litUneString());
         string prenom  (litUneString());
         vector<unsigned> vGlace(4, 0);
-        for (unsigned j(0); j < 4; j = j + 1){
+        for (unsigned j(0); j < 4; j = j + 1){ // On lit les 4 indices qui sont le nombre de points données aux glaces
             vGlace[j] = litUnEntier();
         }
         vPart.push_back(participant{nom, prenom, vGlace});
@@ -98,7 +98,7 @@ int main()
     }
     //cout << "Compteur Choco : " << vCompteur[0] << "   Compteur pour Fraises : " << vCompteur[1] << "   Compteur pour Banane : " << vCompteur[2] << "   Compteur pour Mangue : " << vCompteur[3] << endl;
 
-    //On annonce le résultat final :
+    //On annonce le résultat final en prenant le parfum avec le plus de points :
     int elu = 0;
     for (unsigned i=1; i < vCompteur.size(); i=i+1){
         if (vCompteur[i] > vCompteur[elu]){
